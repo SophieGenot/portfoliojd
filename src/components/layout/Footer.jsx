@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav } from "react-bootstrap";
 
 export function Footer() {
   return (
@@ -24,13 +24,16 @@ export function Footer() {
           {/* SECTION 2 – Services */}
           <Col xs={12} md={4} className="text-start">
             <h4>Liens utiles</h4>
+            
+            <Nav>
             <ul className="list-unstyled mt-2 liens-utiles">
-              <li>Accueil</li>
-              <li>Services</li>
-              <li>Portfolio</li>
-              <li>Me contacter</li>
+              <li><Nav.Link href="#home">Home</Nav.Link></li>
+              <li><Nav.Link href="#services">Services</Nav.Link></li>
+              <li><Nav.Link href="#portfolio">Portfolio</Nav.Link></li>
+              <li><Nav.Link href="#contact">Me contact</Nav.Link></li>
               <li>Mentions légales</li>
             </ul>
+            </Nav>
           </Col>
 
           {/* SECTION 3 – À propos */}

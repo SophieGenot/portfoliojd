@@ -45,8 +45,8 @@ function TooltipInCopyExample() {
   );
 }
 
-export function AccordionM() {
-  const [ , setIsMobile] = useState(window.innerWidth <= 768);
+export function MyAccordion() {
+  const [ , ] = useState(window.innerWidth <= 768);
   const [activeKeys, setActiveKeys] = useState([]);
 
   useEffect(() => {
@@ -87,7 +87,7 @@ export function AccordionM() {
         <Accordion.Body>
              alwaysdata<br />
           91 Rue du Faubourg Saint-Honoré, 75008 Paris<br />
-          <i class="bi bi-globe"   ></i> 
+          <i className="bi bi-globe"   ></i> 
            <a href="https://www.alwaysdata.com/fr/"
             target="_blank"
             rel="noopener noreferrer">

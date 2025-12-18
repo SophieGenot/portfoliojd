@@ -52,7 +52,29 @@ body {
   cursor: pointer;           /* optionnel */
 }
 
-.liens-utiles li:hover{
+/* Supprime l'espacement par défaut des listes */
+.liens-utiles {
+  padding: 0;
+  margin: 0;
+  list-style: none;        
+  gap: 1rem;              /* espace horizontal entre les liens */
+}
+
+/* Supprime marges des li */
+.liens-utiles li {
+  margin: 0;
+}
+
+/* Style des liens */
+.liens-utiles li a {
+  color: #fff;            /* blanc par défaut */
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* Hover */
+.liens-utiles li a:hover {
   text-decoration: underline;
   font-weight: bolder;
+  color: #fff;
 }
