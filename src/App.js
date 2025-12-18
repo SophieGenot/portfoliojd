@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { MaNavbar, CardProfile } from "./components/layout/Header";
+import { GridCards, VisitCard, Portfolio, Services, ContactBlock } from "./components/ui/Cards";
+import { AccordionM } from "./components/ui/Accordion";
+import { Footer } from "./components/layout/Footer";
 
-function App() {
+export default function App() {
+  const [showVisitCard, setShowVisitCard] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MaNavbar />
+      <CardProfile onOpenVisitCard={() => setShowVisitCard(true)}/>
+      <GridCards />
+      <AccordionM />
+      <VisitCard  show={showVisitCard} onClose={() => setShowVisitCard(false)}/>
+      <Services />
+      <Portfolio />
+      <ContactBlock />
+      <Footer />
+    </>
   );
 }
-
-export default App;
