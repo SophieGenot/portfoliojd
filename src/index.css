@@ -1,18 +1,11 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+
+
 @font-face {
   font-family: "nunitosans";
   src: url(../public/assets/fonts/nunitosans.woff);
 }
 
-.navbar-brand,
-.nav-link {
+.navbar-brand,.nav-link {
   font-weight: 400em;
   text-transform: uppercase;
   color: white;
@@ -38,41 +31,81 @@ body {
 }
 
 .card-background:hover {
-  filter: brightness(85%); /* assombrit la carte au survol */
-  cursor: pointer; /* optionnel, montre que c'est interactif */
+  filter: brightness(85%); 
+  cursor: pointer; 
+}
+
+.modal-dialog.visit-card-modal {
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog.visit-card-modal {
+    max-width: 95%;
+  }
+}
+
+.visit-card-modal .modal-content {
+  border-radius: 12px;
+  background-color: #212529;
+}
+
+.visitcard-image-col {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visitcard-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.primary {
+  all: unset;                 
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #0d6efd;  
+  margin: 1rem 0;
+}
+
+.hrtitle{
+  width: 30%;
+  height: 4px;
+  margin: 0 auto;
 }
 
 .social-icon {
-  color: #ccc;               /* couleur de base */
-  transition: color 0.3s ease; /* transition fluide */
+  color: #ccc;               
+  transition: color 0.3s ease; 
 }
 
 .social-icon:hover {
-  color: #fff;               /* couleur au survol */
-  cursor: pointer;           /* optionnel */
+  color: #fff;              
+  cursor: pointer;           
 }
 
-/* Supprime l'espacement par défaut des listes */
 .liens-utiles {
   padding: 0;
   margin: 0;
   list-style: none;        
-  gap: 1rem;              /* espace horizontal entre les liens */
+  gap: 1rem;           
 }
 
-/* Supprime marges des li */
 .liens-utiles li {
   margin: 0;
 }
 
-/* Style des liens */
 .liens-utiles li a {
-  color: #fff;            /* blanc par défaut */
+  color: #fff;           
   text-decoration: none;
   font-weight: normal;
 }
 
-/* Hover */
 .liens-utiles li a:hover {
   text-decoration: underline;
   font-weight: bolder;

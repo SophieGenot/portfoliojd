@@ -1,6 +1,6 @@
 import { Container, Card, Col, Row, Button } from "react-bootstrap";
 
-export function Portfolio() { // Portfolio
+export function Portfolio() { 
   const projects = [
     { id: 1, title: "Fresh Food", 
       image: "/assets/img/portfolio/fresh-food.jpg", 
@@ -29,8 +29,17 @@ export function Portfolio() { // Portfolio
   ];
 
   return (
+  <div>
+    <img
+      src="/assets/img/banner.jpg"
+      alt="Bannière"
+      className="img-fluid w-100"
+      style={{ maxHeight: '400px', objectFit: 'cover' }} />
+      
     <Container className="my-5">
       <h2 className="text-center mb-4">Portfolio</h2>
+      <div className="text-center mb-4">Voici quelques-unes de mes réalisations</div>
+      <hr className="primary hrtitle" /> <br />
       <Row>
         {projects.map((project) => (
           <Col key={project.id} xs={12} md={4} className="mb-4">
@@ -38,8 +47,7 @@ export function Portfolio() { // Portfolio
               <Card.Img
                 variant="top"
                 src={project.image}
-                alt={project.title}
-              />
+                alt={project.title} />
 
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{project.title}</Card.Title>
@@ -57,5 +65,6 @@ export function Portfolio() { // Portfolio
         ))}
       </Row>
     </Container>
+  </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Accordion, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Accordion, OverlayTrigger, Tooltip, Container } from 'react-bootstrap';
 
 // Composant Link qui accepte une URL externe
 const Link = ({ id, children, title, url }) => (
@@ -62,11 +62,13 @@ export function MyAccordion() {
   }, []);
 
   return (
+  <Container className="my-5">
     <Accordion
       alwaysOpen
       activeKey={activeKeys}
-      onSelect={(eventKey) => setActiveKeys(eventKey)}
-    >
+      onSelect={(eventKey) => setActiveKeys(eventKey)}>
+        <h2 className="text-center mb-4">Mentions légales</h2>
+        <hr className="primary hrtitle" />
       <Accordion.Item eventKey="0">
         <Accordion.Header>Éditeur du site</Accordion.Header>
         <Accordion.Body>
@@ -104,5 +106,6 @@ export function MyAccordion() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
+  </Container>
   );
 }

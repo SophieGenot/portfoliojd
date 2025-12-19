@@ -2,8 +2,8 @@ import { Navbar as BootstrapNavBar, Container, Nav } from "react-bootstrap";
 
 export function MaNavbar() {
   return (
-    <BootstrapNavBar expand="lg" bg="dark" variant="dark" className="sticky-top">
-      <Container>
+    <BootstrapNavBar expand="lg" bg="dark" variant="dark" className="fixed-top">
+      <Container fluid>
         <BootstrapNavBar.Brand href="/">John Doe</BootstrapNavBar.Brand>
 
         <BootstrapNavBar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,12 +1,12 @@
-import { Container, Card, Button } from "react-bootstrap";
+import { Card, Button, Container } from "react-bootstrap";
 
 export function CardProfile({ onOpenVisitCard }) {
   return (
-    <Container className="mt-4">
-      <Card className="text-center card-background">
-        <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center h-100">
+    <Container className="my-5">
+      <Card className="text-center card-background rounded-0">
+        <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center vh-100">
           <Card.Title className="text-white">
-            Bonjour, je suis John Doe
+           <h2>Bonjour, je suis John Doe</h2> 
           </Card.Title>
           <Card.Text className="text-white">
             <h1>Développeur web full stack</h1>

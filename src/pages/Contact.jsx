@@ -13,17 +13,17 @@ export function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Vérification simple : tous les champs obligatoires
+    // Les champs sont tous obligatoires
     if (!nom || !email || !telephone || !sujet || !message) {
       setError("Merci de remplir tous les champs avant d'envoyer le formulaire !");
       return;
     }
 
-    // Si tout est ok
-    setError(""); // on efface le message
+    // Si tout ok
+    setError(""); // efface le message
     alert("Message envoyé avec succès !");
     
-    // Ici tu peux réinitialiser le formulaire si tu veux
+    // réinitialisation de formulaire
     setNom(""); setEmail(""); setTelephone(""); setSujet(""); setMessage("");
   };
 
@@ -33,7 +33,7 @@ export function Contact() {
       <div className="text-center mb-4">
         Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact.
       </div>
-
+      <hr className="primary hrtitle" /><br />
       <Row xs={1} md={1} className="g-4">
         <Col>
           <Card>
@@ -42,7 +42,7 @@ export function Contact() {
                 {/* Colonne 1 : Formulaire */}
                 <Col md={6} className="mb-3 mb-md-0">
                   <Card.Title>Formulaire de contact</Card.Title>
-
+                  <hr className="primary" />
                   {/* Message d'erreur */}
                   {error && <Alert variant="danger">{error}</Alert>}
 
@@ -99,15 +99,32 @@ export function Contact() {
 
                 {/* Colonne 2 : Coordonnées + carte */}
                 <Col md={6}>
-                  <Card.Title>Coordonnées</Card.Title>
+                  <Card.Title>Mes coordonnées</Card.Title>
+                   <hr className="primary" />
                   <ListGroup variant="flush" className="mb-3">
-                    <ListGroup.Item><strong>Adresse :</strong> 123 rue Exemple, 75000 Paris</ListGroup.Item>
-                    <ListGroup.Item><strong>Téléphone :</strong> +33 1 23 45 67 89</ListGroup.Item>
-                    <ListGroup.Item><strong>Email :</strong> contact@example.com</ListGroup.Item>
+                    <ListGroup.Item>John Doe</ListGroup.Item>
+                    <ListGroup.Item>
+                      <i className="bi bi-map me-2"></i>
+                       40 rue Laure Diebold
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <i className="bi bi-geo-alt me-2"></i>
+                       69009 Lyon, France
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <i className="bi bi-phone me-2"></i>
+                       10 20 30 40 50
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      <i className="bi bi-envelope-at me-2"></i>
+                       john.doe@gmail.com
+                    </ListGroup.Item>
                   </ListGroup>
-                  <div style={{ height: "250px", backgroundColor: "#eee", textAlign: "center", lineHeight: "250px" }}>
-                    Carte ici
-                  </div>
+                 <div className="image-container">
+                  <img src="/assets/img/adress-jd.jpg"
+                  alt="plan de l'adresse de John Doe"
+                  className="img-fluid" />
+                 </div>
                 </Col>
               </Row>
             </Card.Body>

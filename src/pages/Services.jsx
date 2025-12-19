@@ -23,10 +23,18 @@ un site web pour le faire remonter dans les résultats des moteurs de recherche
       icon: "bi bi-search" },
   ];
 return (
+  <div>
+    <img
+      src="/assets/img/banner.jpg"
+      alt="Bannière"
+      className="img-fluid w-100"
+      style={{ maxHeight: '400px', objectFit: 'cover' }} />
+   
     <Container className="my-5">
       <h2 className="text-center mb-4">Mon offre de services</h2>
        <div className="text-center mb-4">Voici les prestations sur 
 lesquelles je peux intervenir</div>
+       <hr className="primary hrtitle" /><br />
       <Row>
         {propositions.map((proposition) => (
           <Col key={propositions.id} xs={12} md={4} className="mb-4">
@@ -50,5 +58,6 @@ lesquelles je peux intervenir</div>
         ))}
       </Row>
     </Container>
+  </div>
   );
 }
