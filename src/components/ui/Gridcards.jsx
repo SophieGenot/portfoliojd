@@ -34,15 +34,15 @@ export function GridCards() {
               <Col md={6}>
                 <Card.Title><h2>Mes compétences</h2></Card.Title>
                 <hr className="primary" />
-                <h3>HTML5 90%</h3>
+                <div>HTML5 90%</div>
                 <ProgressBar variant="danger" now={90} className="mb-2" />
-                <h3>CSS3 80%</h3>
+                <div>CSS3 80%</div>
                 <ProgressBar variant="info" now={80} className="mb-2" />
-                <h3>JAVASCRIPT 70%</h3>
+                <div>JAVASCRIPT 70%</div>
                 <ProgressBar variant="warning" now={70} className="mb-2" />
-                <h3>PHP 60%</h3>
+                <div>PHP 60%</div>
                 <ProgressBar variant="success" now={60} className="mb-3" />
-                <h3>REACT 50%</h3>
+                <div>REACT 50%</div>
                 <ProgressBar now={50} className="mb-3" />
               </Col>
             </Row>

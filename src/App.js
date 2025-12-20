@@ -8,6 +8,9 @@ import { Portfolio } from "./pages/Portfolio";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
 import { Footer } from "./components/layout/Footer";
+import './style.css';
+import './elements.css';
+
 
 export default function App() {
   const [showVisitCard, setShowVisitCard] = useState(false);
