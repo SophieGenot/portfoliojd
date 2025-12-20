@@ -2,8 +2,8 @@ import { useState } from "react";
 import { MaNavbar } from "./components/layout/Header";
 import { CardProfile } from "./components/ui/Cardprofil";
 import { VisitCard } from "./pages/Visitcard";
-import { GridCards } from "./components/ui/Gridcards";
-import { MyAccordion } from "./components/ui/Accordion";
+import { Skills } from "./components/ui/Skills";
+import { LegalesMentions } from "./components/ui/Legalesmentions";
 import { Portfolio } from "./pages/Portfolio";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";
@@ -21,8 +21,8 @@ export default function App() {
       <CardProfile onOpenVisitCard={() => setShowVisitCard(true)}/>   
       </section>  
       <VisitCard  show={showVisitCard} onClose={() => setShowVisitCard(false)}/>
-      <GridCards />
-      <MyAccordion />
+      <Skills />
+      <LegalesMentions />
       <section id="portfolio">
         <Portfolio />
       </section>

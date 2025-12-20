@@ -45,7 +45,7 @@ function TooltipInCopyExample() {
   );
 }
 
-export function MyAccordion() {
+export function LegalesMentions() {
   const [ , ] = useState(window.innerWidth <= 768);
   const [activeKeys, setActiveKeys] = useState([]);
 
@@ -55,7 +55,7 @@ export function MyAccordion() {
       setActiveKeys(mobile ? [] : ['0']);
     };
 
-    handleResize(); // important
+    handleResize(); 
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
@@ -67,8 +67,8 @@ export function MyAccordion() {
       alwaysOpen
       activeKey={activeKeys}
       onSelect={(eventKey) => setActiveKeys(eventKey)}>
-        <h2 className="text-center mb-4">Mentions légales</h2>
-        <hr className="primary hrtitle" />
+        <h2 className="text-center mb-4"><strong>Mentions légales</strong></h2>
+        <hr className="primary hrtitle" /> <br />
       <Accordion.Item eventKey="0">
         <Accordion.Header>Éditeur du site</Accordion.Header>
         <Accordion.Body>

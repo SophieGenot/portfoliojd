@@ -29,7 +29,7 @@ export function Contact() {
 
   return (
     <Container className="my-5">
-      <h2 className="text-center mb-4">Contact</h2>
+      <h2 className="text-center mb-4"> <strong>Contact</strong></h2>
       <div className="text-center mb-4">
         Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact.
       </div>

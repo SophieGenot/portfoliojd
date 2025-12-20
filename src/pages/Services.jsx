@@ -31,7 +31,7 @@ return (
       style={{ maxHeight: '400px', objectFit: 'cover' }} />
    
     <Container className="my-5">
-      <h2 className="text-center mb-4">Mon offre de services</h2>
+      <h2 className="text-center mb-4"><strong>Mon offre de services</strong></h2>
        <div className="text-center mb-4">Voici les prestations sur 
 lesquelles je peux intervenir</div>
        <hr className="primary hrtitle" /><br />

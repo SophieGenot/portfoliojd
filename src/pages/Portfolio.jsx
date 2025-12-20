@@ -37,7 +37,7 @@ export function Portfolio() {
       style={{ maxHeight: '400px', objectFit: 'cover' }} />
       
     <Container className="my-5">
-      <h2 className="text-center mb-4">Portfolio</h2>
+      <h2 className="text-center mb-4"><strong>Portfolio</strong></h2>
       <div className="text-center mb-4">Voici quelques-unes de mes réalisations</div>
       <hr className="primary hrtitle" /> <br />
       <Row>

@@ -1,7 +1,22 @@
+@font-face {
+  font-family: 'NunitoSans';
+  src: url(./fonts/nunitosans.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+body {
+  font-family: 'NunitoSans', sans-serif;
+  font-weight: 400px;
+}
 
-footer h4 {
-  font-size: 1.1rem; 
+strong{
+  font-weight: 600;
+}
+
+.langages{
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .primary {
@@ -50,4 +65,16 @@ footer h4 {
   text-decoration: underline;
   font-weight: bolder;
   color: #fff;
+}
+
+footer, footer * {
+  font-family: 'NunitoSans', sans-serif;
+}
+
+footer h4 {
+  font-size: 1.1rem; 
+}
+
+footer li {
+  font-size: 0.9rem; /* ou la taille que tu veux */
 }
