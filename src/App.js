@@ -3,7 +3,7 @@ import { MaNavbar } from "./components/layout/Header";
 import { CardProfile } from "./components/ui/Cardprofil";
 import { VisitCard } from "./pages/Visitcard";
 import { Skills } from "./components/ui/Skills";
-import { LegalesMentions } from "./components/ui/Legalesmentions";
+import { LegalesMentions } from "./components/ui/LegalesMentions";
 import { Portfolio } from "./pages/Portfolio";
 import { Services } from "./pages/Services";
 import { Contact } from "./pages/Contact";

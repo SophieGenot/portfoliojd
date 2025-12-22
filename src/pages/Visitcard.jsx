@@ -3,25 +3,40 @@ import { Col, Row, Button, Modal } from "react-bootstrap";
 
 export function VisitCard({ show, onClose }) {
   const [profile, setProfile] = useState(null);
+useEffect(() => {
+  fetch("https://api.github.com/users/SophieGenot")
+    .then((response) => response.json())
+    .then((data) => {
+      const fetchedProfile = {
+        name: data.name || data.login,
+        githubUrl: data.html_url,
+        location: data.location,
+        description: data.bio,
+        repositories: data.public_repos,
+        followers: data.followers,
+        following: data.following,
+        avatar: data.avatar_url,
+      };
 
-  useEffect(() => {
-    // simulation d'une récupération de données au chargement
-    const fetchedProfile = {
-      name: "John Doe",
-      githubUrl: "https://github.com/SophieGenot",
-      location: "Lyon, France",
-      description:
-        "As we all know, John Doe's identity is unknown. I just wanted to contribute without being known.",
-      repositories: 1,
-      followers: 16,
-      following: 0,
-      avatar: "/assets/img/avatar-github.jpg",
-    };
+      setProfile(fetchedProfile);
+    })
+    .catch((error) => {
+      console.error(
+        "Erreur lors du chargement du profil GitHub :",
+        error
+      );
+    });
+}, []);
 
-    setProfile(fetchedProfile);
-  }, []); //  exécuté qu'une seule fois
-
-  if (!profile) return null;
+ if (!profile) {
+    return (
+      <Modal show={show} centered>
+        <Modal.Body className="text-center bg-dark text-light">
+          Chargement du profil GitHub...
+        </Modal.Body>
+      </Modal>
+    );
+  }
 
   return (
     <Modal

@@ -15,24 +15,26 @@ export function Skills() {
                 <Card.Img
                   variant="top"
                   src="/assets/img/john-doe-about.jpg"
-                  className="mb-3"
-                />
+                  className="mb-3" />
                 <Card.Text>
-                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Praesent vel risus eget eros fermentum convallis. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit.</p>
-                   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent vel risus eget eros fermentum convallis. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit.</p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent vel risus eget eros fermentum convallis. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit.</p>
+                  dolor sit amet, consectetur adipiscing elit.
                 </Card.Text>
+                <Card.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Praesent vel risus eget eros fermentum convallis. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </Card.Text>  
+                <Card.Text> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Praesent vel risus eget eros fermentum convallis. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit.
+                </Card.Text>
+                 
               </Col>
 
               {/* Colonne 2 : Compétences */}
               <Col md={6}>
-                <Card.Title><h2><strong>Mes compétences</strong></h2></Card.Title>
+                <Card.Title as="h2"><strong>Mes compétences</strong></Card.Title>
                 <hr className="primary" />
                 <div className="langages">HTML5 90%</div>
                 <ProgressBar variant="danger" now={90} className="mb-2" />

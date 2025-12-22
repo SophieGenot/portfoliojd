@@ -5,12 +5,12 @@ export function CardProfile({ onOpenVisitCard }) {
     <Container className="my-5">
       <Card className="text-center card-background rounded-0">
         <Card.Body className="d-flex flex-column justify-content-center align-items-center text-center vh-100">
-          <Card.Title className="text-white">
-           <h2>Bonjour, je suis John Doe</h2> 
+          <Card.Title as="h2" className="text-white">
+           Bonjour, je suis John Doe
           </Card.Title>
-          <Card.Text className="text-white">
-            <h1>Développeur web full stack</h1>
-          </Card.Text>
+          <Card.Title as="h1" className="text-white">
+            Développeur web full stack
+          </Card.Title>
           <Button variant="danger"  onClick={onOpenVisitCard}
           >En savoir plus</Button>
         </Card.Body>

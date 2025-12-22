@@ -37,7 +37,7 @@ lesquelles je peux intervenir</div>
        <hr className="primary hrtitle" /><br />
       <Row>
         {propositions.map((proposition) => (
-          <Col key={propositions.id} xs={12} md={4} className="mb-4">
+          <Col key={proposition.id} xs={12} md={4} className="mb-4">
             <Card className="h-100 text-center">
               <div
                 className="d-flex align-items-center justify-content-center"
