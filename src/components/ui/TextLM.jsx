@@ -7,7 +7,7 @@ const Link = ({ id, children, title, url }) => (
   </OverlayTrigger>
 );
 
-export function TooltipInCopyExample() {
+export function TextLM() {
   // renderLink prend maintenant l'URL
   const renderLink = (id, title, children, url) => <Link id={id} title={title} url={url}>{children}</Link>;
 

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Accordion, Container } from 'react-bootstrap';
-import { TooltipInCopyExample } from './TooltipInCopyExample';
+import { TextLM } from "../components/ui/TextLM";
 
-export function LegalesMentions() {
+export function Mentions() {
   const [ , ] = useState(window.innerWidth <= 768);
   const [activeKeys, setActiveKeys] = useState([]);
 
@@ -59,7 +59,7 @@ export function LegalesMentions() {
         <Accordion.Header>Crédits</Accordion.Header>
         <Accordion.Body>
             Crédits
-            <TooltipInCopyExample />
+            <TextLM />
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
